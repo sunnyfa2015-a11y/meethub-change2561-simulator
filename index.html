@@ -676,16 +676,18 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--t
 // DATA
 // ══════════════════════════════════════════════════════════════════
 let ARTISTS = [
-  { name:'Lookmhee & Sonya', photos:[] },
-  { name:'Lilly & Belle',    photos:[], disabled:true }
+  { name:'Lookmhee & Sonya', photos:['https://upload.wikimedia.org/wikipedia/commons/b/b9/Lookmhee.png','https://upload.wikimedia.org/wikipedia/commons/e/e9/Sonya_saranphat.png'] },
+  { name:'Lilly & Belle',    photos:['https://image.tmdb.org/t/p/w300/jdir5g2V37Qdj0JH1KGc5iBqFeQ.jpg','https://image.tmdb.org/t/p/w300/dFEtzDhoMJzKqQTiZzJEWuY9tMw.jpg'], disabled:true }
 ];
 
 const DEFAULTS = [
-  // Lookmhee & Sonya (LMSY) — avg of Manila 2025.3 (SM Skydome cap ~1500), Bangkok "Be My Valentine" 1st fanmeet (~800). Macau excluded per China rule.
-  { A:{ seats:770,  sellThru:.75, price:110, sponsor:3500, guarantee:30000, gmmShare:.00, covered:5000, localOps:30000, travel:15000,
-        tiers:[{ratio:2,price:160},{ratio:6,price:110},{ratio:2,price:65}] },
-    B:{ seats:1100, sellThru:.75, price:110, sponsor:5500, guarantee:22000, gmmShare:.20, covered:5000, localOps:30000, travel:15000,
-        tiers:[{ratio:2,price:160},{ratio:6,price:110},{ratio:2,price:65}] } },
+  // Lookmhee & Sonya (LMSY) — last 6 months (Oct 2025–Apr 2026), ex-China.
+  // Singapore 2025.12.14 @ The Theatre at Mediacorp (cap ~1700): VIP S$348 / CAT1 S$268 / CAT2 S$188 / CAT3 S$88 / CAT4 S$68 → weighted avg ≈ US$130.
+  // Taipei 2026.3 announced (prices TBD).
+  { A:{ seats:1100, sellThru:.75, price:130, sponsor:4000, guarantee:35000, gmmShare:.00, covered:5000, localOps:30000, travel:15000,
+        tiers:[{ratio:2,price:230},{ratio:6,price:130},{ratio:2,price:60}] },
+    B:{ seats:1575, sellThru:.75, price:130, sponsor:6000, guarantee:25000, gmmShare:.20, covered:5000, localOps:30000, travel:15000,
+        tiers:[{ratio:2,price:230},{ratio:6,price:130},{ratio:2,price:60}] } },
   // Lilly & Belle — new duo (2026 "I Wanna Be Sup'Tar"), no public fanmeet data yet · disabled placeholder
   { A:{ seats:500,  sellThru:.70, price:90,  sponsor:2500, guarantee:15000, gmmShare:.00, covered:5000, localOps:30000, travel:15000,
         tiers:[{ratio:2,price:130},{ratio:6,price:90},{ratio:2,price:55}] },
